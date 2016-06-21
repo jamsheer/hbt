@@ -1,13 +1,13 @@
 # hbt
 =====
-Names
+ygag
 =====
 
-Names is a simple Hello World kind of django project:
+ygag is a simple Hello World kind of django project:
 
 - home page should have a form that asks for a name
 - on POST, the name should be saved in a database together with the date/time it was added, then redirect to...
-- a view that displays "Hello, <submitted name>"
+- a view that displays "Hello, submitted name"
 - activate the django admin and make the names listed with the date/time it was added
 - Create a RESTful webservice API endpoint for returning the submitted names in JSON format (you can use django-rest-framework)
 - the API endpoint should be protected by an authorization token
