@@ -29,8 +29,8 @@ Quick start
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 3. Any global settings for a REST framework API are kept in a single configuration dictionary named REST_FRAMEWORK. Start off by adding the following to your settings.py module:
     REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
+    Use Django's standard `django.contrib.auth` permissions,
+     or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
