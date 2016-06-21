@@ -19,17 +19,27 @@ Quick start
 
     INSTALLED_APPS = [
         ...
-        'ygag',
+        'ygag.apps.YgagConfig',,
+        'rest_framework',
     ]
 
 2. Include the ygag URLconf in your project urls.py like this::
 
     url(r'^ygag/', include('ygag.urls')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+3. Any global settings for a REST framework API are kept in a single configuration dictionary named REST_FRAMEWORK. Start off by adding the following to your settings.py module:
+    REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+    }
 
-3. Run `python manage.py migrate` to create the ygag models.
+4. Run `python manage.py migrate` to create the ygag models.
 
-4. Start the development server and visit http://127.0.0.1:8000/admin/
+5. Start the development server and visit http://127.0.0.1:8000/admin/
    to create a name (you'll need the Admin app enabled).
 
-5. Visit http://127.0.0.1:8000/ygag/ to add names
+6. Visit http://127.0.0.1:8000/ygag/ to add names
 
