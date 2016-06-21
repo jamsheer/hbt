@@ -1,13 +1,13 @@
 # hbt
 =====
-Names
+ygag
 =====
 
-Names is a simple Hello World kind of django project:
+ygag is a simple Hello World kind of django project:
 
 - home page should have a form that asks for a name
 - on POST, the name should be saved in a database together with the date/time it was added, then redirect to...
-- a view that displays "Hello, <submitted name>"
+- a view that displays "Hello, submitted name"
 - activate the django admin and make the names listed with the date/time it was added
 - Create a RESTful webservice API endpoint for returning the submitted names in JSON format (you can use django-rest-framework)
 - the API endpoint should be protected by an authorization token
@@ -22,14 +22,14 @@ Quick start
         'ygag',
     ]
 
-2. Include the polls URLconf in your project urls.py like this::
+2. Include the ygag URLconf in your project urls.py like this::
 
     url(r'^ygag/', include('ygag.urls')),
 
-3. Run `python manage.py migrate` to create the polls models.
+3. Run `python manage.py migrate` to create the ygag models.
 
 4. Start the development server and visit http://127.0.0.1:8000/admin/
-   to create a poll (you'll need the Admin app enabled).
+   to create a name (you'll need the Admin app enabled).
 
 5. Visit http://127.0.0.1:8000/ygag/ to add names
 
