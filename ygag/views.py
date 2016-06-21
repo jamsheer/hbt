@@ -4,7 +4,15 @@ from django.http import HttpResponse
 from django.template import loader
 from .forms import NameForm
 from .models import Name
+from rest_framework import viewsets
+from .serializers import NameSerializer
 
+class NameViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Name.objects.all().order_by('-entry_date')
+    serializer_class = NameSerializer
 
 def thanks(request):
     template = loader.get_template('ygag/thanks.html')
