@@ -22,14 +22,14 @@ Quick start
         'ygag',
     ]
 
-2. Include the polls URLconf in your project urls.py like this::
+2. Include the ygag URLconf in your project urls.py like this::
 
     url(r'^ygag/', include('ygag.urls')),
 
-3. Run `python manage.py migrate` to create the polls models.
+3. Run `python manage.py migrate` to create the ygag models.
 
 4. Start the development server and visit http://127.0.0.1:8000/admin/
-   to create a poll (you'll need the Admin app enabled).
+   to create a name (you'll need the Admin app enabled).
 
 5. Visit http://127.0.0.1:8000/ygag/ to add names
 
