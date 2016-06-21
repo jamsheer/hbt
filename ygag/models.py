@@ -5,7 +5,7 @@ from django.db import models
 # Create your models here.
 class Name(models.Model):
     name_text = models.CharField(max_length=200)
-    entry_date = models.DateTimeField('date added')
+    entry_date = models.DateTimeField('date added',auto_now=True)
 
     def __str__(self):
         return self.name_text
