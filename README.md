@@ -15,21 +15,21 @@ Names is a simple Hello World kind of django project:
 Quick start
 -----------
 
-1. Add "names" to your INSTALLED_APPS setting like this::
+1. Add "ygag" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
         ...
-        'names',
+        'ygag',
     ]
 
 2. Include the polls URLconf in your project urls.py like this::
 
-    url(r'^names/', include('names.urls')),
+    url(r'^ygag/', include('ygag.urls')),
 
 3. Run `python manage.py migrate` to create the polls models.
 
 4. Start the development server and visit http://127.0.0.1:8000/admin/
    to create a poll (you'll need the Admin app enabled).
 
-5. Visit http://127.0.0.1:8000/names/ to add names
+5. Visit http://127.0.0.1:8000/ygag/ to add names
 
